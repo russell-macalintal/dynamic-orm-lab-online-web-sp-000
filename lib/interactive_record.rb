@@ -38,5 +38,5 @@ class InteractiveRecord
     col_names.delete_if {|name| name == "id"}
     col_names.join(", ")
   end
-  
+
 end
