@@ -33,4 +33,10 @@ class InteractiveRecord
     self.class.table_name
   end
 
+  def col_names_for_insert
+    col_names = self.class.column_names
+    col_names.delete_if {|name| name == "id"}
+    col_names.join(", ")
+  end
+  
 end
